@@ -1,0 +1,262 @@
+/* =========================================
+   VARIABLES DE COLOR Y CONFIGURACIÓN BASE
+   ========================================= */
+:root {
+    --color-fondo: #fefae0;
+    --color-secundario: #3d405b;
+    --color-acento: #e07a5f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, 
+nav a.activo {
+    color: var(--color-acento);
+}
+
+/* =========================================
+   CONTENEDORES PRINCIPALES
+   ========================================= */
+.contenedor {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+.centrado {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.texto-destacado {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+    background-color: rgba(61, 64, 91, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-acento);
+}
+
+/* =========================================
+   CATÁLOGO (Dropdowns y Tarjetas)
+   ========================================= */
+.categoria {
+    background-color: #fff;
+    border: 1px solid rgba(61, 64, 91, 0.2);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.categoria summary {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Flecha personalizada para el dropdown estático */
+.categoria summary::-webkit-details-marker {
+    display: none;
+}
+.categoria summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-acento);
+}
+.categoria[open] summary::after {
+    content: '-';
+}
+
+.contenido-categoria {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    background-color: rgba(254, 250, 224, 0.5); /* Fondo apenas tintado */
+}
+
+.juego {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid rgba(61, 64, 91, 0.1);
+}
+
+.juego h2 {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.juego img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-fondo);
+}
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+   ========================================= */
+.formulario {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid rgba(61, 64, 91, 0.1);
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.campo input, 
+.campo textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+}
+
+.campo input:focus, 
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.btn-enviar {
+    background-color: var(--color-acento);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #c9664b; /* Tono más oscuro del acento */
+}
+
+/* =========================================
+   MEDIA QUERIES (Responsividad)
+   ========================================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .contenido-categoria {
+        grid-template-columns: 1fr;
+    }
+    
+    .formulario {
+        padding: 1.5rem 1rem;
+    }
+}

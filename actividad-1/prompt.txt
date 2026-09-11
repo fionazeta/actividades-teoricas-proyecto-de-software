@@ -1,0 +1,35 @@
+Quiero que crees un sitio web estático para reseñas de juegos de mesa. Debe ser accesible y responsivo.
+
+El sitio debe ser construido únicamente con HTML y CSS.
+
+Debes generar el contenido de los siguientes archivos listos para copiar y pegar:
+- index.html
+- contacto.html
+- mantenimiento.html
+- catalogo.html
+
+index.html es la página principal, debe tener un breve texto de bienvenida y una barra de navegación con links a las páginas de Contacto (contacto.html), Mantenimiento (mantenimiento.html) y Catálogo (catalogo.html). 
+
+contacto.html debe tener un pequeño formulario con un botón de enviar
+
+mantenimiento.html debe decir "Sitio desarrollado cómo parte de la materia Proyecto de Software, UNLP, 2026"
+
+catálogo.html debe presentar 3 categorías: Estrategia, Cartas y Familiares. Al seleccionar una categoría se debe desplegar (con un dropdown) de manera estática un listado de los juegos en ella. Cada juego debe tener un título, una imagen decorativa, un pequeño texto que lo reseñe elaborad por tí y un enlace a las reglas.
+El enlace a las reglas debe seguir la estructura "Puedes acceder al Reglamento", dónde la palabra reglamento contiene el link.
+
+Los juegos que deben ser incluidos en cada categoría son:
+Estrategia: Ajedrez y Go
+Cartas: Truco y Canasta
+Familiar: Estanciero y Burako
+
+En respecto a los estilos del sitio, debes generar un archivo separado con el nombre "estilosIA.css"
+Se debe incluir el código para responsividad en dispositivos de distintos tamaños de pantallas, incluyendo computadoras, tablets y celulares.
+
+La paleta de colores es:
+- #fefae0 para color de fondo
+- #3d405b como color secundario
+- #e07a5f para acentos de color.
+
+Debes usar un estilo simple y minimalista.
+
+Para las imágenes y los reglamentos debes dejar enlaces placeholder.
